@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: stephen-ingress
+ namespace: default
+spec:
+ ingressClassName: cilium
+ rules:
+ - host: "<>.us-east-1.elb.amazonaws.com"
+   http:
+     paths:
+     - path: / # < play with this
+       pathType: Prefix
+       backend:
+         service:
+           name: hello-flask
+           port:
+             number: 80
