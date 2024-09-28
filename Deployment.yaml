@@ -16,6 +16,6 @@ spec:
    spec:
      containers:
      - name: flask
-       image: public.ecr.aws/sctp-sandbox/stephen-flask-app:latest
+       image: public.ecr.aws/sctp-sandbox/luqman-flask-ecr-app:latest
        ports:
        - containerPort: 8000
